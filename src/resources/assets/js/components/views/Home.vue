@@ -5,7 +5,7 @@
   	    <nav class="home-header-navbar navbar navbar-expand-lg navbar-dark bg-transparent">
           <router-link class="navbar-brand d-flex flex-row align-items-center text-uppercase" to="/" exact>
             <img class="mr-2" src="/images/logo.png" width="36" height="36">
-            <span>Portal Pemerintah Provinsi Banten</span>
+            <span>Provinsi Banten</span>
           </router-link>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -20,7 +20,7 @@
   	    </nav><!-- /.navbar -->
 
         <div class="home-header-content">
-          <h1 class="home-header-title">Portal Pemerintah Provinsi Banten</h1>
+          <h1 class="home-header-title">Provinsi Banten</h1>
           <p class="home-header-description mb-5">Portal Pemerintah Provinsi Banten paket yang digunakan untuk membuat halaman depan dan dashboard, <strong>menggunakan Tanara sebagai base template</strong>, guru bagi para ulama Indonesia dan guru besar di Mekkah, lahir di sini.</p>
           <p class="mb-0">
             <router-link class="btn btn-lg btn-light d-block d-sm-inline-block rounded-0 px-5 mx-2 mb-3 mb-sm-0" to="/dashboard"><i class="fa fa-th-large" aria-hidden="true"></i> Dashboard</router-link>

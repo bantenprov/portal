@@ -56,4 +56,3 @@ $ composer require bantenprov/portal:dev-master
 ```bash
 $ php artisan vendor:publish --tag=dtstatistik-assets --force
 ```
-#@!@dmin16-devban-kanekes_990__

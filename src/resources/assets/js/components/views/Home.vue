@@ -5,7 +5,7 @@
   	    <nav class="home-header-navbar navbar navbar-expand-lg navbar-dark bg-transparent">
           <router-link class="navbar-brand d-flex flex-row align-items-center text-uppercase" to="/" exact>
             <img class="mr-2" src="/images/logo.png" width="36" height="36">
-            <span>Portal Pemerintah Provinsi Banten</span>
+            <span>PSB</span>
           </router-link>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -13,18 +13,18 @@
           <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <router-link class="nav-link" to="/sign-up"><i class="fa fa-user-plus" aria-hidden="true"></i> Create account</router-link>
+                <router-link class="nav-link" :to="{ name: 'sign-up' }"><i class="fa fa-user-plus" aria-hidden="true"></i> Create account</router-link>
               </li>
             </ul>
           </div>
   	    </nav><!-- /.navbar -->
 
         <div class="home-header-content">
-          <h1 class="home-header-title">Portal Pemerintah Provinsi Banten</h1>
-          <p class="home-header-description mb-5">Portal Pemerintah Provinsi Banten paket yang digunakan untuk membuat halaman depan dan dashboard, <strong>menggunakan Tanara sebagai base template</strong>, guru bagi para ulama Indonesia dan guru besar di Mekkah, lahir di sini.</p>
+          <h1 class="home-header-title">PSB</h1>
+          <p class="home-header-description mb-5">PSB adalah sebuah kecamatan di Kabupaten Serang, Provinsi Banten, Indonesia. Daerah ini sangat terkenal karena ulama besar, <strong>Syaikh Nawawi al-Bantani</strong>, guru bagi para ulama Indonesia dan guru besar di Mekkah, lahir di sini.</p>
           <p class="mb-0">
-            <router-link class="btn btn-lg btn-light d-block d-sm-inline-block rounded-0 px-5 mx-2 mb-3 mb-sm-0" to="/dashboard"><i class="fa fa-th-large" aria-hidden="true"></i> Dashboard</router-link>
-            <router-link class="btn btn-lg btn-outline-light d-block d-sm-inline-block rounded-0 px-5 mx-2 mb-3 mb-sm-0" to="/sign-in"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign in</router-link>
+            <router-link class="btn btn-lg btn-light d-block d-sm-inline-block px-5 mx-2 mb-3 mb-sm-0" :to="{ name: 'dashboard' }"><i class="fa fa-th-large" aria-hidden="true"></i> Dashboard</router-link>
+            <router-link class="btn btn-lg btn-outline-light d-block d-sm-inline-block px-5 mx-2 mb-3 mb-sm-0" :to="{ name: 'sign-in' }"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign in</router-link>
           </p>
         </div>
       </div><!-- /.container -->

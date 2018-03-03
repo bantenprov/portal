@@ -54,5 +54,5 @@ $ composer require bantenprov/portal:dev-master
 ## Publish vendor command :
 
 ```bash
-$ php artisan vendor:publish --tag=dtstatistik-assets --force
+$ php artisan vendor:publish --tag=portal-assets --force
 ```

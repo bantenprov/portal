@@ -136,7 +136,7 @@ class PortalServiceProvider extends ServiceProvider
 
         $this->publishes([
             $packageAssetsPath => resource_path('/assets'),
-        ], 'dtstatistik-assets');
+        ], 'portal-assets');
     }
 
     /**

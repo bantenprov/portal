@@ -1,4 +1,4 @@
-## portal
+# portal
 
 [![Join the chat at https://gitter.im/portal/Lobby](https://badges.gitter.im/portal/Lobby.svg)](https://gitter.im/portal/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bantenprov/portal/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bantenprov/portal/?branch=master)
@@ -10,49 +10,40 @@
 [![Monthly Downloads](https://poser.pugx.org/bantenprov/portal/d/monthly)](https://packagist.org/packages/bantenprov/portal)
 [![Daily Downloads](https://poser.pugx.org/bantenprov/portal/d/daily)](https://packagist.org/packages/bantenprov/portal)
 
+PSB
 
-Portal Pemerintah Provinsi Banten
+## Install
+using composer
 
-## Install :
+Install Tanara
+~~~
+$ composer create-project bantenprov/tanara:dev-dev
+~~~
 
-First, Install tanara
+Install PSB
+~~~
+$ composer require bantenprov/portal:"dev-master"
+~~~
 
-```bash
-$ composer create-project bantenprov/tanara:dev-master
-```
-then install this packages
+## Download
+git clone
+~~~
+$ git clone https://github.com/bantenprov/portal.git
+~~~
 
-```bash
-$ composer require bantenprov/portal:dev-master
-```
-
-## Edit `config/app.php`
-
-```php
+## Edit config/App.php
+~~~
 'providers' => [
 
         /*
          * Laravel Framework Service Providers...
          */
-        Illuminate\Auth\AuthServiceProvider::class,
-        Illuminate\Broadcasting\BroadcastServiceProvider::class,
-        Illuminate\Bus\BusServiceProvider::class,
-        Illuminate\Cache\CacheServiceProvider::class,
-        Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
-        Illuminate\Cookie\CookieServiceProvider::class,
-        Illuminate\Database\DatabaseServiceProvider::class,
-        Illuminate\Encryption\EncryptionServiceProvider::class,
-        Illuminate\Filesystem\FilesystemServiceProvider::class,
-        Illuminate\Foundation\Providers\FoundationServiceProvider::class,
-        Illuminate\Hashing\HashServiceProvider::class,
-        Illuminate\Mail\MailServiceProvider::class,
-        //==
-
+//==
         Bantenprov\Portal\PortalServiceProvider::class,
-```
+~~~
 
 ## Publish vendor command :
-
-```bash
+~~~
 $ php artisan vendor:publish --tag=portal-assets --force
-```
+$ php artisan vendor:publish --tag=portal-public-image --force
+~~~

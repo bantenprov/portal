@@ -1,8 +1,8 @@
 <?php
 
-if (! function_exists('exsistsPortal')) {
-    function exsistsPortal()
+if (! function_exists('Portal')) {
+    function Portal()
     {
-        return 'Welcome to function exsistsPortal() for Bantenprov\Portal package';
+        return 'Welcome to function Portal() for Bantenprov\Portal package';
     }
 }

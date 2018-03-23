@@ -2,7 +2,7 @@
   <nav class="site-navbar navbar navbar-expand-md navbar-dark flex-md-nowrap p-0">
     <router-link class="navbar-brand col-md-4 col-lg-3 mr-0 d-flex flex-row align-items-center text-uppercase" :to="{ name: 'home' }" exact>
       <img class="mr-2" src="/images/logo.png" width="36" height="36">
-      <span>PPDB 2018</span>
+      <span>Portal Banten</span>
     </router-link>
 
     <div class="btn-group d-none d-md-inline-flex mx-3" role="group">

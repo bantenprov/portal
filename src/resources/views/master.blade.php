@@ -17,7 +17,7 @@ $polyfills = [
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>PPDB 2018 | Dindikbud Banten</title>
+    <title>Portal | Provinsi Banten</title>
 
     <link rel="icon" href="{{ asset('favicon.png') }}">
 

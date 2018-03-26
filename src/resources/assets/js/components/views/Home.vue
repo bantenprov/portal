@@ -6,8 +6,8 @@
 
         <div class="container">
           <router-link class="navbar-brand d-flex flex-row align-items-center text-uppercase" :to="{ name: 'home' }" exact>
-            <img class="mr-2" src="/images/logo.png" width="36" height="36">
-            <span>Portal Banten</span>
+            <img class="mr-2" src="/images/portal-logo.png" width="auto" height="40">
+            
           </router-link> 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -43,9 +43,9 @@
              <h1 class="home-header-title">Portal <strong class="text-warning"> Banten</strong></h1>
           <p class="home-header-description mb-5 wow fadeInUp">Gerbang Informasi dan Layanan<br>Pemerintah Provinsi Banten.</p>            
             <div class="home-header-description mb-5 input-group justify-content-center py-5 wow slideInUp">       
-                <input type="text" class="form-control rounded-left col-8" placeholder="Cari layanan / informasi yang anda inginkan..." aria-label="" aria-describedby="basic-addon1">                
+                <input type="text" class="form-control form-control-lg rounded-left col-8" placeholder="Cari Layanan / Informasi yang Anda inginkan..." aria-label="" aria-describedby="basic-addon1">                
                 <div class="input-group-prepend">
-                  <router-link class="btn btn-tanara rounded-right " :to="{ name: 'home' }"><i class="fa fa-search"></i> Cari</router-link>
+                  <router-link class="btn btn-tanara btn-lg rounded-right " :to="{ name: 'home' }"><i class="middle fa fa-search"></i></router-link>
                 </div>  
             </div> 
             <div class="clearfix"></div>
@@ -130,12 +130,11 @@
               <p >Portal Pemerintah Provinsi Banten, merupakan pintu gerbang bagi masyarakat untuk mengetahui hasil pembangunan yang telah dilaksanakan yang informasinya secara detil dapat dilihat pada situs situs terkait juga dapat menemukan navigasi atau petunjuk tentang layanan yang diselenggarakan Pemerintah Provinsi Banten.</p>
             </div>
             <div class="row">
-              <div class="col-md-6 wow fadeInLeft"> <img src="/images/tentang2.png" class="img-responsive"> </div>
+              <div class="col-md-6 wow fadeInLeft"> <img src="/images/portal.png" class="img-responsive"> </div>
               <div class="col-md-6 wow fadeInRight">
-                  <h4 class="ratakiri">Kenapa Online ?</h4>
                   <p class="ratakirikanan">Semangat keterbukaan yang dituangkan dalam sistem Informasi dan aplikasi memudahkan proses pelaksanaan kegiatan pemerintahan dan pengawasan jalannya roda pemerintahan yang dilaksanakan melalui berbagai perangkat daerah</p>
                   <div class="space"></div>
-                  <p class="ratakirikanan">Untuk Mendukung semua itu kami telah berusaha sebaik mungkin dengan mempersiapkan Hardware maupun software yang memadai untuk melayani:</p>
+                  <p class="ratakirikanan">Fitur Layanan:</p>
                   <div class="space"></div><div class="list-style">
                     <div class="row ratakirikanan">
                       <div class="col-lg-6 col-sm-6 col-xs-12">
@@ -373,7 +372,6 @@
 </style>
 
 <script>
-
 var VueScrollactive = require('vue-scrollactive');
 Vue.use(VueScrollactive);
 

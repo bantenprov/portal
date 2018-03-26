@@ -20,9 +20,13 @@
                <li class="nav-item"><a   class="nav-link scrollactive-item" href="#asas">Layanan</a></li>
                <li class="nav-item"><a   class="nav-link scrollactive-item" href="#anggaran">Anggaran</a></li>
                <li class="nav-item"><a   class="nav-link scrollactive-item" href="#tentang">Tentang</a></li> 
+               <li v-if="authenticated" class="nav-item">
+                <router-link class="nav-link" :to="{ name: 'dashboard' }">
+                  <i class="fa fa-th-large" aria-hidden="true"></i> Dashboard</router-link>
+              </li>
                            
               <li v-if="authenticated" class="nav-item">
-                <a @click.prevent="logout" class="nav-link" href="#">
+                <a @click.prevent="logout" class="nav-link" :to="{ name: 'dashboard' }">
                   <i class="fa fa-sign-out fa-fw" aria-hidden="true"></i> Logout
                 </a>
               </li>
@@ -50,7 +54,7 @@
             </div> 
             <div class="clearfix"></div>
             <p class="mb-0 wow fadeInDown">
-              <router-link class="btn btn-lg btn-light d-block d-sm-inline-block px-5 mx-2 mb-3 mb-sm-0 animated slideInLeft" :to="{ name: 'dashboard' }"><i class="fa fa-th-large" aria-hidden="true"></i> Dashboard</router-link>              
+              <!--router-link class="btn btn-lg btn-light d-block d-sm-inline-block px-5 mx-2 mb-3 mb-sm-0 animated slideInLeft" :to="{ name: 'dashboard' }"><i class="fa fa-th-large" aria-hidden="true"></i> Dashboard</router-link-->              
             </p>
           </div>
         </div>

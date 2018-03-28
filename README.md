@@ -10,7 +10,7 @@
 [![Monthly Downloads](https://poser.pugx.org/bantenprov/portal/d/monthly)](https://packagist.org/packages/bantenprov/portal)
 [![Daily Downloads](https://poser.pugx.org/bantenprov/portal/d/daily)](https://packagist.org/packages/bantenprov/portal)
 
-Poral Banten
+Portal Banten
 
 ## Install
 using composer
@@ -20,7 +20,7 @@ Install Tanara
 $ composer create-project bantenprov/tanara:dev-dev
 ~~~
 
-Install PSB
+Install Portal
 ~~~
 $ composer require bantenprov/portal:"dev-master"
 ~~~

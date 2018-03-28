@@ -15,11 +15,14 @@
           <div class="collapse navbar-collapse" id="navbar">
           <scrollactive class="nav navbar-nav ml-auto"  active-class="active" :offset="80" :duration="800" bezier-easing-value=".5,0,.35,1">
         
-          <ul class="nav navbar-nav ml-auto">
-               <li class="nav-item"><a  class="nav-link scrollactive-item" href="#beranda">Beranda</a></li>
+          <ul class="nav navbar-nav ml-auto collapse">
+               <li class="nav-item"><a  class="nav-link scrollactive-item" href="#beranda" data-toggle="collapse" data-target=".navbar-collapse.in">Beranda</a></li>
                <li class="nav-item"><a   class="nav-link scrollactive-item" href="#asas">Layanan</a></li>
                <li class="nav-item"><a   class="nav-link scrollactive-item" href="#anggaran">Anggaran</a></li>
                <li class="nav-item"><a   class="nav-link scrollactive-item" href="#tentang">Tentang</a></li> 
+               <li class="nav-item">
+                <router-link class="nav-link" :to="{ name: 'listcontent' }">Kategori Layanan</router-link>
+              </li>
                <li v-if="authenticated" class="nav-item">
                 <router-link class="nav-link" :to="{ name: 'dashboard' }">
                   <i class="fa fa-th-large" aria-hidden="true"></i> Dashboard</router-link>
@@ -165,50 +168,58 @@
      
     </section>
 
-    <section id="anggaran" class="home-section home-section-3">
+    <section id="anggaran" class="home-section home-section-3 container-fluid">
       <div class="container">
-        <h2>Anggaran dan Penyerapan</h2>
-        <div class="row">
-          <div class="col-sm-3 mb-3">
-            <div class="card text-white bg-primary h-100">
-              <div class="card-body">
-                <h5 class="card-title">Anggaran dan Realisasi APBN</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div><!-- /col -->
-          <div class="col-sm-3 mb-3">
-            <div class="card text-white bg-success h-100">
-              <div class="card-body">
-                <h5 class="card-title">Anggaran dan Realisasi APBD</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div><!-- /col -->
-          <div class="col-sm-3 mb-3">
-            <div class="card text-white bg-warning h-100">
-              <div class="card-body">
-                <h5 class="card-title">Bankeu</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div><!-- /col -->
-          <div class="col-sm-3 mb-3">
-            <div class="card text-white bg-danger h-100">
-              <div class="card-body">
-                <h5 class="card-title">Indikator Makro</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div><!-- /col -->
-        </div><!-- /.row -->
+             <h2>Anggaran dan Penyerapan</h2>
+             <hr>
+            <div class="row no-gutter">
+              <div class="col-md-3">
+                  <div class="mumbul-item border-box hover pink-hover">                      
+                      <div class="desc">
+                          <h4 class="text-bold portal-color">Anggaran dan Realisasi APBN</h4>
+                          <p>Sumber Dana APBN</p>
+                          <p><router-link class="btn btn-tanara rounded" :to="{ name: 'listcontent' }"><i class="fa fa-external-link"></i> Kunjungi</router-link></p> 
+                      </div>
+                  </div><!-- /.mumbul-item -->
+              </div><!-- /.col-md-3 -->  
+
+              <div class="col-md-3">
+                  <div class="mumbul-item border-box hover deep-purple-hover ">                      
+                      <div class="desc">
+                          <h4 class="text-bold portal-color">Anggaran dan Realisasi APBD</h4>
+                          <p>Sumber Dana APBD</p>
+                          <p><router-link class="btn btn-tanara rounded" :to="{ name: 'listcontent' }"><i class="fa fa-external-link"></i> Kunjungi</router-link></p> 
+                      </div>
+                  </div><!-- /.mumbul-item -->
+              </div><!-- /.col-md-3 -->
+
+              <div class="col-md-3">
+                  <div class="mumbul-item border-box hover brand-hover ">                      
+                      <div class="desc">
+                          <h4 class="text-bold portal-color">Anggaran dan Realisasi BANKEU</h4>
+                          <p>Bantuan Keuangan</p>
+                          <p><router-link class="btn btn-tanara rounded" :to="{ name: 'listcontent' }"><i class="fa fa-external-link"></i> Kunjungi</router-link></p> 
+                      </div>
+                  </div><!-- /.mumbul-item -->
+              </div><!-- /.col-md-3 -->
+               
+               <div class="col-md-3">
+                  <div class="mumbul-item border-box hover green-hover ">                      
+                      <div class="desc">
+                          <h4 class="text-bold portal-color">Indikator <br>Makro</h4>
+                          <p>Indikator Realisasi Anggaran</p>
+                          <p><router-link class="btn btn-tanara rounded" :to="{ name: 'listcontent' }"><i class="fa fa-external-link"></i> Lihat</router-link></p> 
+                      </div>
+                  </div><!-- /.mumbul-item -->
+              </div><!-- /.col-md-3 -->
+          </div><!-- /.row -->
       </div>
     </section>
 
     <footer class="footer foothome">
       <div class="container mt-5">
-        <div class="row col-12">
-          <div class="col-8">
+        <div class="row col-md-12">
+          <div class="col-md-8">
             <h4 class="footer-title text-white">Peta situs</h4>
             <ul class="footer-nav">
               <li class="footer-nav-item"><a href="#" class="footer-nav-link">Layanan</a></li>
@@ -218,7 +229,7 @@
               <li class="footer-nav-item"><a href="#" class="footer-nav-link">Perijinan Satu Pintu</a></li>
             </ul>
           </div>
-          <div class="col-4">
+          <div class="col-md-4">
               <h4 class="footer-title text-white">Pemerintah Provinsi Banten</h4>
               <p>Kawasan Pusat Pemerintahan Provinsi Banten<br>JL. Syech Nawawi Al-Bantani - Curug - Palima<br>Kota Serang - Provinsi Banten</p>
           </div>
@@ -315,6 +326,14 @@
   .portal-color{
   color:#298470;
   }
+
+  .portal-color:hover{
+  color:#fff
+  }
+
+  .portal-bgcolor{
+  background-color:#298470 !important;
+  }
   
   .btn-tanara {
     color: #fff;
@@ -326,7 +345,9 @@
     background-color: #FFC107;
     border-color: #FFC107;
   }
-
+  .tanara-bayang {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  }
   .footer-nav-item{
     color: #fff;
   }

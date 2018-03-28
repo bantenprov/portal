@@ -1,400 +1,41 @@
 //
-// vue-select
-//
-
-.v-select {
-  display: block;
-  width: 100%;
-  font-size: $font-size-base;
-  line-height: $input-line-height;
-  color: $input-color;
-  background-color: $input-bg;
-  background-clip: padding-box;
-
-  // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
-  @if $enable-rounded {
-    // Manually use the if/else instead of the mixin to account for iOS override
-    border-radius: $input-border-radius;
-  } @else {
-    // Otherwise undo the iOS default
-    border-radius: 0;
-  }
-
-  @include box-shadow($input-box-shadow);
-  @include transition($input-transition);
-
-  // Unstyle the caret on `<select>`s in IE10+.
-  &::-ms-expand {
-    background-color: transparent;
-    border: 0;
-  }
-
-  // Customize the `:focus` state to imitate native WebKit styles.
-  @include form-control-focus();
-
-  // Placeholder
-  &::placeholder {
-    color: $input-placeholder-color;
-    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
-    opacity: 1;
-  }
-
-  // Disabled and read-only inputs
-  //
-  // HTML5 says that controls under a fieldset > legend:first-child won't be
-  // disabled if the fieldset is disabled. Due to implementation difficulty, we
-  // don't honor that edge case; we style them as disabled anyway.
-  &:disabled,
-  &[readonly] {
-    background-color: $input-disabled-bg;
-    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
-    opacity: 1;
-  }
-}
-
-//
-// vuejs-datepicker
-//
-
-.vdp-datepicker__calendar {
-  .up {
-    background-color: #eee;
-
-    &:hover {
-      background-color: #e7e7e7 !important;
-    }
-  }
-
-  .prev,
-  .next {
-    background-color: #ddd;
-
-    &:hover {
-      background-color: #d7d7d7 !important;
-    }
-  }
-}
-
-//
-// vue-fullscreen
-//
-
-.fullscreen {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-/*------------------------------------------------------------------
-Common mumbul boxes
--------------------------------------------------------------------*/
-
-.mumbul-item,
-.mumbul-item.hover-outline h2,
-.mumbul-item.border-box h2,
-.mumbul-item.flat-border-box h2,
-.mumbul-item.flat-border-box .icon,
-.mumbul-item.hover-outline .icon,
-.mumbul-item.hover-outline .icon .colored,
-.mumbul-item.hover-outline .desc {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-
-.mumbul-item .icon {
-    font-size: 30px; /*global font size*/
-}
-.mumbul-item .icon .material-icons {
-    font-size: 40px;
-    line-height: 40px;
-}
-
-
-.mumbul-item .desc p{
-    margin: 0;
-}
-
-.mumbul-item h2 {
-    font-weight: 500;
-}
-
-
-@media (max-width: 991px){
-    .mumbul-item {
-        margin-bottom: 30px;
-    }
-}
-
-/*------------------------------------------------------------------
-    mumbul Box
--------------------------------------------------------------------*/
-
-
-.mumbul-box {
-    position: relative;
-    overflow: hidden;
-    min-height: 300px;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-.mumbul-wrapper .intro-header {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    padding-top:10px;
-
-    -webkit-transition: -webkit-transform 0.35s;
-    -moz-transition: -webkit-transform 0.35s;
-    -ms-transition: -webkit-transform 0.35s;
-    transition: transform 0.35s;
-
-    -webkit-transform: translate3d(0,-50%,0);
-    -moz-transform: translate3d(0,-50%,0);
-    -ms-transform: translate3d(0,-50%,0);
-    transform: translate3d(0,-50%,0);
-}
-
-.mumbul-box:hover .mumbul-wrapper .intro-header {
-    -webkit-transform: translate3d(0,-50%,0) translate3d(0,-60px,0);
-       -moz-transform: translate3d(0,-50%,0) translate3d(0,-60px,0);
-        -ms-transform: translate3d(0,-50%,0) translate2d(0,-60px,0);
-            transform: translate3d(0,-50%,0) translate3d(0,-60px,0);
-}
-
-.mumbul-wrapper .intro-header i {
-    font-size: 34px;
-    margin-bottom: 25px;
-}
-
-.mumbul-wrapper .intro-header i[class^="flaticon-"] {
-    margin-bottom: 10px;
-    line-height: 55px;
-}
-.mumbul-wrapper .intro-header i[class^="flaticon-"]:before {
-    font-size: 55px;
-}
-
-.mumbul-wrapper .intro-header i.material-icons {
-    font-size: 40px;
-}
-.mumbul-wrapper .intro-header h2 {
-    font-weight: 500;
-}
-
-.mumbul-box .content{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding-top: 30px;
-    width: 100%;
-    opacity: 0;
-
-    -webkit-transform: translate3d(0,10px,0);
-       -moz-transform: translate3d(0,10px,0);
-        -ms-transform: translate3d(0,10px,0);
-            transform: translate3d(0,10px,0);
-
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-       -moz-transition: opacity 0.35s, -webkit-transform 0.35s;
-        -ms-transition: opacity 0.35s, -webkit-transform 0.35s;
-                    transition: opacity 0.35s, transform 0.35s;
-}
-.mumbul-box:hover .content {
-    opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-       -moz-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-            transform: translate3d(0,0,0);
-}
-.mumbul-box:hover {
-    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
-
-/*IE9 Fixing*/
-.ie9 .mumbul-box .mumbul-wrapper .intro-header {
-    top: 20%;
-}
-
-
-/*colored icon*/
-.brand-icon {
-    color: #03a9f4;
-}
-.pink-icon {
-    color: #ed145b ;
-}
-.purple-icon {
-    color: #9c27b0;
-}
-.deep-purple-icon {
-    color: #673ab7;
-}
-.green-icon {
-    color: #8bc34a;
-}
-.cyan-icon {
-    color: #00bcd4;
-}
-.red-icon {
-    color: #f6483f;
-}
-.yellow-icon {
-    color: #f5c400;
-}
-.dark-icon {
-    color: #202020;
-}
-
-
-
-.brand-hover:hover {
-    background-color: #03a9f4 !important;
-    color:#fff;
-}
-.pink-hover:hover {
-    background-color: #ed145b !important;
-    color:#fff;
-}
-.purple-hover:hover {
-    background-color: #9c27b0 !important;
-    color:#fff;
-}
-.deep-purple-hover:hover {
-    background-color: #673ab7 !important;
-    color:#fff;
-}
-.green-hover:hover {
-    background-color: #8bc34a  !important;
-    color:#fff;
-}
-
-
-
-.hover:hover i,
-.hover:hover h2,
-.hover:hover .content {
-    color: #fff !important;
-}
-
-.hover:hover i {
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-}
-
-
-
-
-
-/*icon hover change*/
-.icon-hover:hover .icon{
-    color: #fff !important;
-    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.icon-hover:hover .colored{
-    color: #fff !important;
-}
-
-.icon-hover-blue:hover .icon{
-    background-color: #03a9f4;
-}
-.icon-hover-pink:hover .icon{
-    background-color: #ed145b;
-}
-.icon-hover-purple:hover .icon{
-    background-color: #9c27b0;
-}
-.icon-hover-green:hover .icon{
-    background-color: #8bc34a;
-}
-.icon-hover-red:hover .icon{
-    background-color: #f6483f;
-}
-
-
-/*Outline Square*/
-.icon-outline .icon {
-    border: 1px solid #e2e2e2;
-}
-
-/*Outline Circle*/
-.icon-circle .icon {
-    border-radius: 50%;
-}
-
-/*Outline Rotate*/
-.icon-angle .icon {
-    border-radius: 4px;
-    margin-right: 40px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-.icon-angle .icon i {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-}
-
-
-.icon-outline:hover .icon {
-    border: 1px solid transparent;
-}
-
-
-
-.mumbul-item.icon-outline .material-icons {
-    font-size: 34px;
-    line-height: 66px;
-}
-
-.border-right {
-    border-right: 1px solid #f1f1f1;
-}
-
-
-
-/*--Global--*/
-
-.container-fluid {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.no-margin {
-    margin: 0 !important;
-}
-
-.no-gutter > [class*='col-'] {
-    padding-right: 0;
-    padding-left: 0;
-}
-.no-padding {
-    padding: 0 !important;
-}
-
-//
 /*--Conten & Blog Css--*/
 //
 
 /* ----------------------------------------------------------------
 Standard blog
 -----------------------------------------------------------------*/
+.page-header {
+  position: relative;
+  min-height: 300px;
+  padding-bottom: 10px;
+  background-color: #0f61a8;
+  }
+
+  .page-header-navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .page-content {
+    //height: calc(100vh - 280px);
+    min-height: 200px;
+    text-align: center;
+  }
+
+  .page-header-title {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #fff;
+    font-size: 40px;
+    text-transform: uppercase;
+
+  }
+
 .post-wrapper {
   padding: 16px;
   border: 1px solid #eee;
-    background-color: #fff;
+    background-color: #E8EEEF;
     -webkit-transition: all .25s;
     -moz-transition: all .25s;
     -ms-transition: all .25s;
@@ -405,6 +46,7 @@ Standard blog
 
 .grid-blog .post-wrapper {
     margin-bottom: 30px;
+    background-color: #fff;
 }
 
 .post-wrapper:hover {
@@ -474,9 +116,11 @@ Standard blog
 }
 
 .default-blog .entry-header .entry-title a {
-    color: #fff;
+    color:#E8EEEF; /*color: #fff; */
 }
 .default-blog .entry-header .entry-title a:hover {
+    text-decoration:none;
+    color: #FFC107;
     /*color: #eee;*/
 }
 
@@ -623,9 +267,13 @@ Blog Sidebar
     margin-bottom: 50px;
 }
 .tt-sidebar-wrapper .widget-title {
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 700;
+    padding-top: 20px;
+    padding-bottom:20px;
     margin-bottom: 25px;
+    color: #fff;
+    background-color:#298470;
 }
 
 
@@ -791,10 +439,12 @@ Categories Widget
 --------------------------------------------------------*/
 .widget_categories {
     border: 1px solid #eee;
-    padding: 20px;
+    //padding: 10px;
+    background-color:#fff;
 }
 
 .widget_categories ul li {
+    list-style-type: none;
     border-bottom: 1px solid #eee;
     padding-bottom: 5px;
     margin-bottom: 5px;
@@ -809,7 +459,8 @@ Categories Widget
     color: #999;
 }
 .widget_categories ul li a:hover{
-    color: #03a9f4;
+    color: #03a9f4;   
+    text-decoration: none;
 }
 
 
@@ -874,6 +525,7 @@ Single Blog Post
 .single-post .entry-header .entry-title {
     margin-top: 5px;
     margin-bottom: 12px;
+    color: #298470;
 }
 .single-post .author-thumb {
     float: left;

@@ -10,7 +10,7 @@
 [![Monthly Downloads](https://poser.pugx.org/bantenprov/portal/d/monthly)](https://packagist.org/packages/bantenprov/portal)
 [![Daily Downloads](https://poser.pugx.org/bantenprov/portal/d/daily)](https://packagist.org/packages/bantenprov/portal)
 
-PSB
+Poral Banten
 
 ## Install
 using composer

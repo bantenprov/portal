@@ -74,32 +74,9 @@
                             </form>
                           </div>
 
-
-                    	<div class="widget widget_categories">
-		                <h3 class="widget-title text-center">Sektor</h3>   
-		                <ul>					
-							<li><a href="#">Sektor Sarana dan Prasarana</a></li>
-							<li><a href="#">Sektor Pemerintahan</a></li>
-							<li><a href="#">Sektor Pembangunan</a></li>
-							<li><a href="#">Sektor Pelayanan</a></li>
-							<li><a href="#">Sektor Legislatif</a></li>
-							<li><a href="#">Sektor Kewilayahan</a></li>
-							<li><a href="#">Sektor Keuangan</a></li>
-							<li><a href="#">Sektor Kepegawaian</a></li>
-							<li><a href="#">Sektor Kemasyarakatan</a></li>
-							<li><a href="#">Sektor Administrasi dan Manajemen</a></li>
-						</ul>
-			            </div>
-							  						  
-						<div class="widget widget_categories">
-			                <h3 class="widget-title text-center">Group</h3>   
-			                <ul>
-								<li><a  href="#">G2G (Government to Government)</a></li>
-								<li><a  href="#">G2C (Government to Citizens)</a></li>
-								<li><a  href="#">G2B (Government to Business)</a></li>
-								<li><a  href="#">G2E (Goverment to Environment)</a></li>
-							</ul>
-			            </div>        
+                      <sector-egovernment-list> </sector-egovernment-list>
+                      <group-egovernment-list> </group-egovernment-list>
+       
                     </div>
                 </div>
                 
@@ -211,7 +188,7 @@
 }
 
 .header-color{
-	background-color:#000;
+  background-color:#000;
 }
 
 .ikon {
